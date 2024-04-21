@@ -1,8 +1,5 @@
 # Import libraries
 import streamlit as st
-import time
-
-###
 
 def get_sales_approaches_resources(score):
 	if score == 3:
@@ -170,9 +167,6 @@ mega_dict_1 = {
 # Create a submit button
 if st.button("Submit"):
 	with st.spinner('Loading...'):
-		# Simulate a 3-second delay
-		time.sleep(2)
-
 
 		common_approaches = set(approaches_final).intersection(set(customer_approaches))
 		if common_approaches:

@@ -209,5 +209,5 @@ if st.button("Submit"):
 	
 		st.markdown('-------')
 		st.write('However, based on the customer needs of your target segment, the most suitable approaches are:')
-			for item in customer_approaches:
-				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+		for item in customer_approaches:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")

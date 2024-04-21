@@ -143,7 +143,6 @@ with col2:
 	max_score = max(responses.values())
 	customer_approaches = [approach for approach, score in responses.items() if score == max_score]
 
-
 mega_dict_1 = {
 	"Social Selling" : "Descrizione a caso",
 	'Problem-Solving Selling': "Descrizione a caso",
@@ -159,63 +158,56 @@ mega_dict_1 = {
 	'Direct Sales Force' : "Descrizione a caso",
 	}
 
-
-
-
-
-
 # Create a submit button
 if st.button("Submit"):
-	with st.spinner('Loading...'):
-
-		common_approaches = set(approaches_final).intersection(set(customer_approaches))
-		if common_approaches:
-			if len(common_approaches) == len(customer_approaches):
-				st.write('The most suitable approaches are:')
-				for item in approaches_final:
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-				st.write('')
-				st.markdown('-------')
-
-				st.write('The most suitable channels are:')
-				for item in channels_final:
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-
-				st.markdown('-------')
-				st.write('Based on the customer needs of your target segment, the same approaches are most appropriate:')
-				for item in common_approaches:
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-			else:
-				st.write('The most suitable approaches are:')
-				for item in approaches_final:
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-				st.write('')
-				st.markdown('-------')
-
-				st.write('The most suitable channels are:')
-
-				for item in channels_final:
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-				st.markdown('-------')
-				st.write('Based on the customer needs of your target segment, the appropriate approaches can include both')
-				for item in list(common_approaches):
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-
-				for item in list(set(customer_approaches) - common_approaches):
-					st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-
+	common_approaches = set(approaches_final).intersection(set(customer_approaches))
+	if common_approaches:
+		if len(common_approaches) == len(customer_approaches):
+			st.write('The most suitable approaches are:')
+			for item in approaches_final:
+				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.write('')
+			st.markdown('-------')
+	
+			st.write('The most suitable channels are:')
+			for item in channels_final:
+				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+	
+			st.markdown('-------')
+			st.write('Based on the customer needs of your target segment, the same approaches are most appropriate:')
+			for item in common_approaches:
+				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		else:
 			st.write('The most suitable approaches are:')
 			for item in approaches_final:
 				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 			st.write('')
 			st.markdown('-------')
-
+	
 			st.write('The most suitable channels are:')
+	
 			for item in channels_final:
 				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-
 			st.markdown('-------')
-			st.write('However, based on the customer needs of your target segment, the most suitable approaches are:')
+			st.write('Based on the customer needs of your target segment, the appropriate approaches can include both')
+			for item in list(common_approaches):
+				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+	
+			for item in list(set(customer_approaches) - common_approaches):
+				st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+	
+	else:
+		st.write('The most suitable approaches are:')
+		for item in approaches_final:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+		st.write('')
+		st.markdown('-------')
+	
+		st.write('The most suitable channels are:')
+		for item in channels_final:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+	
+		st.markdown('-------')
+		st.write('However, based on the customer needs of your target segment, the most suitable approaches are:')
 			for item in customer_approaches:
 				st.markdown(f"- **{item}**: {mega_dict_1[item]}")

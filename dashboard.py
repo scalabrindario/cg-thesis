@@ -43,16 +43,16 @@ def get_sales_channels_innovation(score1, score2, channels1):
 		if score2 == 3:
 			return ['Direct Sales Force', 'Telemarketing']
 		elif score2 == 2:
-			return ['Value-added Partners', 'Distributors', 'Trade Shows', 'Telemarketing']
+			return ['Value-added partners', 'Distributors', 'Trade Shows', 'Telemarketing']
 		elif score2 == 1:
 			return ['Internet']
 	elif score1 == 2:
 		if score2 == 3:
-			return ['Telemarketing', 'Trade Shows', 'Value-added Partners']
+			return ['Telemarketing', 'Trade Shows', 'Value-added partners']
 		elif score2 == 2:
-			return ['Value-added Partners', 'Distributors']
+			return ['Value-added partners', 'Distributors']
 		elif score2 == 1:
-			return ['Internet', 'Value-added Partners', 'Distributors']
+			return ['Internet', 'Value-added partners', 'Distributors']
 	elif score1 == 1:
 		if score2 == 3:
 			return ['Telemarketing', 'Trade Shows']

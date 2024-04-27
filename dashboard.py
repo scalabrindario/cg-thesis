@@ -26,7 +26,7 @@ def get_sales_approaches_innovation(score1, score2, approaches1):
 		elif score2 == 1:
 			return ['Need-Satisfaction Selling', 'Social Selling']
 	elif score1 == 2:
-        	if score2 == 3:
+        if score2 == 3:
 			return ['Enterprise Selling', 'Consultative Selling']
 		elif score2 == 2:
 			return ['Challenger Selling', 'Problem-Solving Selling']
@@ -113,17 +113,17 @@ responses_approaches = {}
 
 # STATEMENT 3
 stat3 = st.select_slider('Our target customers need and/or value a consultative approach to selling, where the selling organisation acts as a strategic long-term ally:', 
-			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat3')
+	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat3')
 responses_approaches['Consultative Selling'] = lab_stat_3_14[stat3]
 
 # STATEMENT 4
 stat4 = st.select_slider('xxxxx', 
-			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat4')
+	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat4')
 responses_approaches['Enterprise Selling'] = lab_stat_3_14[state]
 
 # STATEMENT 5
 stat5 = st.select_slider('xxxxx', 
-			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat5')
+	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat5')
 responses_approaches['Challenger Selling'] = lab_stat_3_14[stat5]
 
 # STATEMENT 6
@@ -133,12 +133,12 @@ responses_approaches['Social Selling'] = lab_stat_3_14[stat6]
 
 # STATEMENT 7
 stat7 = st.select_slider('xxxxx', 
-			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat7')
+	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat7')
 responses_approaches['Need-Satisfaction Selling'] = lab_stat_3_14[stat7]
 
 # STATEMENT 8
 stat8 = st.select_slider('xxxxx', 
-			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat8')
+	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat8')
 responses_approaches['Problem-Solving Selling'] = lab_stat_3_14[stat8]
 
 max_score_approaches = max(responses_approaches.values())
@@ -151,9 +151,9 @@ responses_channels = {}
 
 # STATEMENT 9
 stat9 = st.select_slider('xxxxx',
-		options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat9')
+	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat9')
 
-if stat1 = 'High'
+if stat1 == 'High':
 	responses_channels['Direct Sales Force'] = lab_stat_3_14[stat9]
 else:
 	responses_channels['Telemarketing'] = lab_stat_3_14[stat9]
@@ -201,9 +201,9 @@ if st.button("Submit"):
 	common_approaches = set(approaches_final).intersection(set(responses_approaches))
 	common_channels = set(channels_final).intersection(set(recommended_channels))
 
-	 # Initialize a note for intensive resource approaches, if applicable
+	# Initialize a note for intensive resource approaches, if applicable
 	if score1 == 2 and score2 == 3 and ('Consultative Selling' in common_approaches or 'Enterprise Selling' in common_approaches):
-        	asterisk_note = "*Please note that while Enterprise Selling or Consultative Selling are resource intensive approaches, they can be implemented with medium level of resources, provided that the startup focuses on a smaller and fewer clients contemporarily."
+		asterisk_note = "*Please note that while Enterprise Selling or Consultative Selling are resource intensive approaches, they can be implemented with medium level of resources, provided that the startup focuses on a smaller and fewer clients contemporarily."
 	resource_intensive_note = "*Please note that although we recommend you implement this channel(s), this suggestion prioritises your customers' needs, but might be too resource intensive."
  
 	if not common_approaches and not common_channels:
@@ -234,11 +234,8 @@ if st.button("Submit"):
 		st.markdown('-------')
 
 		st.markdown(f"Therefore, we recommend focusing on the implementation of: {list(common_approaches) if common_approaches else approaches_final} and {list(common_channels) if common_channels else channels1}.")
-
-
-	        if not common_channels:
+		if not common_channels:
 			st.markdown(resource_intensive_note)
-
-        	if asterisk_note:
+		if asterisk_note:
 			st.markdown(asterisk_note)
             

@@ -201,6 +201,9 @@ if st.button("Submit"):
 	common_approaches = set(approaches_final).intersection(set(responses_approaches))
 	common_channels = set(channels_final).intersection(set(recommended_channels))
 
+
+	asterisk_note = ""
+	
 	# Initialize a note for intensive resource approaches, if applicable
 	if score1 == 2 and score2 == 3 and ('Consultative Selling' in common_approaches or 'Enterprise Selling' in common_approaches):
 		asterisk_note = "*Please note that while Enterprise Selling or Consultative Selling are resource intensive approaches, they can be implemented with medium level of resources, provided that the startup focuses on a smaller and fewer clients contemporarily."

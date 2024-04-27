@@ -62,7 +62,7 @@ def get_sales_channels_innovation(score1, score2, channels1):
 			return ['Internet', 'Trade Shows']
 
 # Reduce margins of layout
-st.set_page_config(layout = "centered")
+st.set_page_config(layout = "wide")
 
 # Hiding arrow from metric
 st.write(
@@ -214,28 +214,44 @@ if st.button("Submit"):
 		for item in approaches_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
-		st.markdown('-------')
-
-		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
+	
 		for item in channels_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+
+		st.markdown('-------')
+		
+		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
+		for item in approaches1:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+		st.write('')
+		
+		for item in channels1:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+
 		st.write('')
 		st.markdown('-------')
 		st.markdown(f"Unfortunately, we cannot recommend a fully aligned sales approach and sales channel as your startup resources availability, product innovativeness and customer needs are not aligned. We highly recommend you to revise your current situation and reflect on your availability of resources, product/service and target segment.")
 
+
+	
 	else:
 		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness, the most suitable approaches and channels are:")
-		st.write('The most suitable approaches are:')
 		for item in approaches_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
-		st.markdown('-------')
-
-		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
+	
 		for item in channels_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
-		st.write('')
+
 		st.markdown('-------')
+		
+		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
+		for item in approaches1:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+		st.write('')
+		
+		for item in channels1:
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 
 		st.markdown(f"Therefore, we recommend focusing on the implementation of: {list(common_approaches) if common_approaches else approaches_final} and {list(common_channels) if common_channels else channels1}.")
 		if not common_channels:

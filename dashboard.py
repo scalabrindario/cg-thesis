@@ -119,7 +119,7 @@ responses_approaches['Consultative Selling'] = lab_stat_3_14[stat3]
 # STATEMENT 4
 stat4 = st.select_slider('xxxxx', 
 	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat4')
-responses_approaches['Enterprise Selling'] = lab_stat_3_14[state]
+responses_approaches['Enterprise Selling'] = lab_stat_3_14[stat4]
 
 # STATEMENT 5
 stat5 = st.select_slider('xxxxx', 

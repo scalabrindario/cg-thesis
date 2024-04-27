@@ -225,7 +225,7 @@ if st.button("Submit"):
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
 		
-		for item in responses_channels:
+		for item in recommended_channels:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 
 		st.write('')
@@ -250,7 +250,7 @@ if st.button("Submit"):
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
 		
-		for item in responses_channels:
+		for item in recommended_channels:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 
 		st.markdown(f"Therefore, we recommend focusing on the implementation of: {list(common_approaches) if common_approaches else approaches_final} and {list(common_channels) if common_channels else channels1}.")

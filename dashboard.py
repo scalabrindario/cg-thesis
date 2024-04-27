@@ -26,7 +26,7 @@ def get_sales_approaches_innovation(score1, score2, approaches1):
 		elif score2 == 1:
 			return ['Need-Satisfaction Selling', 'Social Selling']
 	elif score1 == 2:
-        if score2 == 3:
+		if score2 == 3:
 			return ['Enterprise Selling', 'Consultative Selling']
 		elif score2 == 2:
 			return ['Challenger Selling', 'Problem-Solving Selling']

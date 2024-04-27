@@ -112,18 +112,18 @@ responses_approaches = {}
 
 
 # STATEMENT 3
-stat3 = st.select_slider('Our target customers need and/or value a consultative approach to selling, where the selling organisation acts as a strategic long-term ally:',
-	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat3')
+stat3 = st.select_slider('Our target customers need and/or value a consultative approach to selling, where the selling organisation acts as a strategic long-term ally:', 
+			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat3')
 responses_approaches['Consultative Selling'] = lab_stat_3_14[stat3]
 
 # STATEMENT 4
-stat4 = st.select_slider('xxxxx',
-	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat4')
+stat4 = st.select_slider('xxxxx', 
+			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat4')
 responses_approaches['Enterprise Selling'] = lab_stat_3_14[state]
 
 # STATEMENT 5
-stat5 = st.select_slider('xxxxx',
-	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat5')
+stat5 = st.select_slider('xxxxx', 
+			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat5')
 responses_approaches['Challenger Selling'] = lab_stat_3_14[stat5]
 
 # STATEMENT 6
@@ -132,13 +132,13 @@ stat6 = st.select_slider('xxxxx',
 responses_approaches['Social Selling'] = lab_stat_3_14[stat6]
 
 # STATEMENT 7
-stat7 = st.select_slider('xxxxx',
-	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat7')
+stat7 = st.select_slider('xxxxx', 
+			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat7')
 responses_approaches['Need-Satisfaction Selling'] = lab_stat_3_14[stat7]
 
 # STATEMENT 8
-stat8 = st.select_slider('xxxxx',
-	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat8')
+stat8 = st.select_slider('xxxxx', 
+			 options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat8')
 responses_approaches['Problem-Solving Selling'] = lab_stat_3_14[stat8]
 
 max_score_approaches = max(responses_approaches.values())

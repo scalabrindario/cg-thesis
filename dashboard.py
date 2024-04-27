@@ -198,7 +198,7 @@ mega_dict_1 = {
 
 # Create a submit button
 if st.button("Submit"):
-	common_approaches = set(approaches_final).intersection(set(responses_approaches))
+	common_approaches = set(approaches_final).intersection(set(recommended_approaches))
 	common_channels = set(channels_final).intersection(set(recommended_channels))
 
 

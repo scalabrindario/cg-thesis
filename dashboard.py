@@ -43,7 +43,7 @@ def get_sales_channels_innovation(score1, score2, channels1):
 		if score2 == 3:
 			return ['Direct Sales Force', 'Telemarketing']
 		elif score2 == 2:
-			return ['Value-added Partners', 'Distributors']
+			return ['Value-added partners', 'Distributors']
 		elif score2 == 1:
 			return ['Telemarketing', 'Trade Shows','Internet']
 	elif score1 == 2:
@@ -166,7 +166,7 @@ responses_channels['Distributors'] = lab_stat_3_14[stat10]
 # STATEMENT 11
 stat11 = st.select_slider('xxxxx',
 	options=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"], key = 'stat11')
-responses_channels['Value-added Partners'] = lab_stat_3_14[stat11]
+responses_channels['Value-added partners'] = lab_stat_3_14[stat11]
 
 # STATEMENT 12
 stat12 = st.select_slider('xxxxx',

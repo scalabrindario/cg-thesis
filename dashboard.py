@@ -210,13 +210,13 @@ if st.button("Submit"):
 	resource_intensive_note = "*Please note that although we recommend you implement this channel(s), this suggestion prioritises your customers' needs, but might be too resource intensive."
  
 	if not common_approaches and not common_channels:
-		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness")
-		st.write('The most suitable approaches are:')
+		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness, the most suitable approaches and channels are:")
 		for item in approaches_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
 		st.markdown('-------')
-		
+
+		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
 		for item in channels_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
@@ -224,13 +224,14 @@ if st.button("Submit"):
 		st.markdown(f"Unfortunately, we cannot recommend a fully aligned sales approach and sales channel as your startup resources availability, product innovativeness and customer needs are not aligned. We highly recommend you to revise your current situation and reflect on your availability of resources, product/service and target segment.")
 
 	else:
-		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness")
+		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness, the most suitable approaches and channels are:")
 		st.write('The most suitable approaches are:')
 		for item in approaches_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')
 		st.markdown('-------')
-		
+
+		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
 		for item in channels_final:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		st.write('')

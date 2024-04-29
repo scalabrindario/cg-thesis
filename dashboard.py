@@ -252,7 +252,8 @@ if st.button("Submit"):
 		
 		for item in recommended_channels:
 			st.markdown(f"- **{item}**")
-
+		
+		st.markdown('-------')
 		st.markdown(f"Therefore, we recommend focusing on the implementation of:")
 
 		exception_list1 = list(common_approaches) if common_approaches else approaches_final

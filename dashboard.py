@@ -251,7 +251,7 @@ if st.button("Submit"):
 		st.write('')
 		
 		for item in recommended_channels:
-			st.markdown(f"**{item}**")
+			st.markdown(f"- **{item}**")
 
 		st.markdown(f"Therefore, we recommend focusing on the implementation of:")
 

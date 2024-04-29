@@ -253,7 +253,17 @@ if st.button("Submit"):
 		for item in recommended_channels:
 			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 
-		st.markdown(f"Therefore, we recommend focusing on the implementation of: {list(common_approaches) if common_approaches else approaches_final} and {list(common_channels) if common_channels else recommended_channels}.")
+		st.markdown(f"Therefore, we recommend focusing on the implementation of:")
+
+		exception_list1 = list(common_approaches) if common_approaches else approaches_final
+		exception_list2 = list(common_channels) if common_channels else recommended_channels
+
+		for item in exception_list1:
+			st.markdown(f"- {item}")
+
+		for item in exception_list2:
+			st.markdown(f"- {item}")
+		
 		if not common_channels:
 			st.markdown(resource_intensive_note)
 		if asterisk_note:

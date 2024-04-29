@@ -212,21 +212,21 @@ if st.button("Submit"):
 	if not common_approaches and not common_channels:
 		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness, the most suitable approaches and channels are:")
 		for item in approaches_final:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 		st.write('')
 	
 		for item in channels_final:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 
 		st.markdown('-------')
 		
 		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
 		for item in recommended_approaches:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 		st.write('')
 		
 		for item in recommended_channels:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 
 		st.write('')
 		st.markdown('-------')
@@ -237,21 +237,21 @@ if st.button("Submit"):
 	else:
 		st.markdown(f"Based on your resource availability and your product/service's level of innovativeness, the most suitable approaches and channels are:")
 		for item in approaches_final:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 		st.write('')
 	
 		for item in channels_final:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 
 		st.markdown('-------')
 		
 		st.markdown(f"Based on the customer needs of your target segment, the most suitable approaches and channels are:")
 		for item in recommended_approaches:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"- **{item}**")
 		st.write('')
 		
 		for item in recommended_channels:
-			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
+			st.markdown(f"**{item}**")
 
 		st.markdown(f"Therefore, we recommend focusing on the implementation of:")
 
@@ -259,10 +259,10 @@ if st.button("Submit"):
 		exception_list2 = list(common_channels) if common_channels else recommended_channels
 
 		for item in exception_list1:
-			st.markdown(f"- {item}")
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 
 		for item in exception_list2:
-			st.markdown(f"- {item}")
+			st.markdown(f"- **{item}**: {mega_dict_1[item]}")
 		
 		if not common_channels:
 			st.markdown(resource_intensive_note)
